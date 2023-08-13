@@ -10,7 +10,8 @@
     "no_nbr": "tsc && node dist/app.js been_raided_records",
     "command_init": "node dist/app.js slashcommand_setup",
     "init": "npm run db_init && npm run command_init",
-    "document": "tsc && jsdoc -r src -d docs -c jsdoc.conf.json"
+    "document": "tsc && jsdoc -r src -d docs -c jsdoc.conf.json",
+    "setup": "npm i && npx prisma db push && npm run init"
   },
   "author": "Lewis Page",
   "license": "MIT",

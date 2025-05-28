@@ -58,7 +58,10 @@ type config = {
     featured_member_tag_multiplier: number,
     bot_version: string,
     event_exclusion_role : string,
-    bot_name: string
+    bot_name: string,
+    ninety_percentile_role: string,
+    seventy_fifth_percentile_role: string,
+    fifty_percentile_role: string,
 }
 
 const text = fs.readFileSync(path.join(rootDir,"config","config.yaml"), "utf-8")

@@ -51,6 +51,10 @@ super_featured_live_role: "1108662564784701511"
 new_member_role: "1108662720007524373"
 event_exclusion_role: "1108662767902261269"
 
+ninety_percentile_role: ""
+seventy_fifth_percentile_role: ""
+fifty_percentile_role: ""
+
 now_live_banned_roles:
   - "1108662665619980342"
   - "1108662767902261269"

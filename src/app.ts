@@ -11,6 +11,7 @@ import IntervalManager from "./functions/core/IntervalManager";
 import liveRoleUpdater from "./controllers/interval/liveRoleUpdater";
 import removeNewRole from "./controllers/interval/removeNewRole";
 import autoWeekEnd from "./controllers/interval/autoWeekEnd";
+import refreshSupportTiers from "./controllers/interval/refreshSupportTiers";
 import createSlashCommands from "./routes/createSlashCommands";
 import config from "./functions/models/config";
 
@@ -26,7 +27,13 @@ client.on('ready', async () => {
         await database.calendarConfig.create({data: {latestDate: new Date(0), serverId: config.server_id}})
     catchup()
 
-    intervalManager.addInstance(liveRoleUpdater, removeNewRole, autoWeekEnd)
+    intervalManager.addInstance(
+        liveRoleUpdater,
+        removeNewRole,
+        autoWeekEnd,
+        refreshSupportTiers
+    )
+    
 });
 
 client.on("error", error => {

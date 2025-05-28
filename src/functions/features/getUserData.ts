@@ -10,7 +10,7 @@ import { SupportTypes } from "../models/supportTypes";
  * @author Lewis Page
  * @description Holds all the critical data needed to run the `getUserData` algorithm.
  */
-interface CriticalData {
+export interface CriticalData {
     member : members,
     onLeaveRecord : onLeave | null,
     allEvents : eventParticipationHistory[],
